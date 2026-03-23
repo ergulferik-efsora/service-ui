@@ -285,6 +285,10 @@ export const notificationMessages = defineMessages({
     id: 'TestCaseLibraryPage.testCaseAddedToTestPlanSuccess',
     defaultMessage: 'Selected Test Case has been added to the Test Plan successfully.',
   },
+  testCasesAddedToTestPlanFromLibrarySuccess: {
+    id: 'TestPlanDetailsPage.testCasesAddedToTestPlanFromLibrarySuccess',
+    defaultMessage: 'Test Cases were successfully added to test plan.',
+  },
   testCaseUpdatedSuccess: {
     id: 'TestCaseLibraryPage.testCaseUpdatedSuccess',
     defaultMessage: 'Test Case has been updated successfully.',

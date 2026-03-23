@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-import { useState } from 'react';
 import { useIntl } from 'react-intl';
-import { Button, SidePanel, Toggle, Selection } from '@reportportal/ui-kit';
+import { Button, SidePanel, Selection, Toggle } from '@reportportal/ui-kit';
 
 import { createClassnames } from 'common/utils';
 import { VoidFn } from '@reportportal/ui-kit/common';
@@ -28,26 +27,30 @@ import { useTestLibraryPanel } from './hooks/useTestLibraryPanel';
 import { messages } from './messages';
 
 import styles from './testLibrarySidePanel.scss';
+import { useState } from 'react';
 
 const cx = createClassnames(styles);
 
 interface TestLibrarySidePanelProps {
   isOpen: boolean;
+  isAddingToTestPlan?: boolean;
   onClose: VoidFn;
-  onAddTestCases: (testCaseIds: number[]) => void;
+  onAddTestCases: (testCaseIds: number[]) => void | Promise<void>;
 }
 
 export const TestLibrarySidePanel = ({
   isOpen,
+  isAddingToTestPlan = false,
   onAddTestCases,
   onClose,
 }: TestLibrarySidePanelProps) => {
   const { formatMessage } = useIntl();
-  const [shouldHideAddedTestCases, setShouldHideAddedTestCases] = useState(false);
+  const [shouldHideAddedTestCases, setShouldHideAddedTestCases] = useState(true);
 
   const { actionsValue, stateValue, selectionCount, hasSelection, clearSelection, addToTestPlan } =
     useTestLibraryPanel({
       isOpen,
+      shouldHideAddedTestCases,
       onAddTestCases,
       onClose,
     });
@@ -66,9 +69,7 @@ export const TestLibrarySidePanel = ({
 
   const contentComponent = (
     <TestLibraryPanelProvider actions={actionsValue} state={stateValue}>
-      <div className={cx('test-library-panel__content')}>
-        {isOpen && <SelectableFolderTree />}
-      </div>
+      <div className={cx('test-library-panel__content')}>{isOpen && <SelectableFolderTree />}</div>
     </TestLibraryPanelProvider>
   );
 
@@ -83,10 +84,18 @@ export const TestLibrarySidePanel = ({
         onClearSelection={clearSelection}
       />
       <div className={cx('test-library-panel__footer-buttons')}>
-        <Button variant="ghost" onClick={addToTestPlan} disabled={selectionCount === 0}>
+        <Button
+          variant="ghost"
+          disabled={selectionCount === 0 || isAddingToTestPlan}
+          onClick={addToTestPlan}
+        >
           {formatMessage(messages.addAndCreateLaunch)}
         </Button>
-        <Button variant="primary" onClick={addToTestPlan} disabled={selectionCount === 0}>
+        <Button
+          variant="primary"
+          onClick={addToTestPlan}
+          disabled={selectionCount === 0 || isAddingToTestPlan}
+        >
           {formatMessage(messages.addToTestPlan)}
         </Button>
       </div>
