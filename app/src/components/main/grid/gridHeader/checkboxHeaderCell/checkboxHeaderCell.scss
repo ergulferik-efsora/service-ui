@@ -19,12 +19,12 @@
   position: sticky;
   top: -1px;
   z-index: $Z_INDEX-GRID_HEADER;
-  height: 50px;
+  height: 42px;
   padding-left: 10px;
   padding-right: 20px;
   text-align: right;
   vertical-align: middle;
-  background-color: $COLOR--primary-gray;
+  background-color: #f8fafc;
 
   @media (max-width: $SCREEN_SM_MAX) {
     display: none;

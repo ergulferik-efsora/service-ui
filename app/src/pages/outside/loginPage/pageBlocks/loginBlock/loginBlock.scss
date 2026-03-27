@@ -17,27 +17,15 @@
 .separator {
   position: relative;
   height: 20px;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin: 20px 0 24px;
   text-align: center;
-
-  @media (max-width: $SCREEN_SM_MAX) {
-    width: 610px;
-  }
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    left: 0;
-    width: 100%;
-    margin-bottom: 25px;
-    margin-top: 37px;
-  }
 }
 .line {
   position: absolute;
   left: 0;
   top: 10px;
   border-top: 1px solid $COLOR--steel-grey;
-  opacity: 0.2;
+  opacity: 0.15;
   width: 100%;
 }
 .or {
@@ -46,16 +34,16 @@
   background: $COLOR--white-two;
   display: inline-block;
   border: none;
-  font-size: 15px;
+  font-size: 13px;
   text-align: center;
   color: $COLOR--steel-grey;
   box-sizing: border-box;
 }
 .bottom-content {
   line-height: 16px;
-  padding: 8px 0;
+  padding: 8px 40px;
 
   @media (max-width: $SCREEN_XS_MAX) {
-    padding: 12px 0;
+    padding: 8px 20px;
   }
 }

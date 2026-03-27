@@ -17,9 +17,11 @@
 .selected-items {
   display: flex;
   justify-content: space-between;
-  padding: 10px 15px 0 15px;
-  border-bottom: 1px solid $COLOR--white;
+  padding: 10px 16px 0 16px;
+  border-bottom: 1px solid #e5e7eb;
   overflow-wrap: break-word;
+  background-color: #eff6ff;
+  border-radius: 14px 14px 0 0;
 }
 
 .content {

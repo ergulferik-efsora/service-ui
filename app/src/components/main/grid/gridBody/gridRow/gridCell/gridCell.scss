@@ -33,12 +33,14 @@ $LEVEL_OFFSET_STEP: 20px;
 }
 
 .grid-cell {
-  padding: 15px 10px;
+  padding: 12px 10px;
   display: table-cell;
   box-sizing: border-box;
-  vertical-align: top;
-  color: $COLOR--charcoal-grey;
+  vertical-align: middle;
+  color: #1e293b;
   font-family: $FONT-REGULAR;
+  font-size: 13px;
+  line-height: 1.5;
   overflow-wrap: break-word;
   border-left-color: $COLOR--primary-gray;
   border-left-style: solid;

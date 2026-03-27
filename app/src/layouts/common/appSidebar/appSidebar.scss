@@ -24,16 +24,16 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 16px 0px 24px 0;
-  width: 48px;
+  padding: 12px 0 20px 0;
+  width: 52px;
   height: calc(100% - 40px);
-  gap: 32px;
+  gap: 24px;
   background-color: $COLOR--darkmode-gray-500;
   z-index: 3;
 }
 
 .logo {
-  width: 48px;
+  width: 52px;
   height: 48px;
 }
 
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: end;
   flex-grow: 1;
-  gap: 8px;
+  gap: 4px;
 
   .sidebar-btn {
     display: none;
@@ -80,11 +80,13 @@
   height: 36px;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 48px;
+  padding-left: 52px;
   cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: $COLOR--darkmode-gray-500;
+    background-color: rgba(255, 255, 255, 0.08);
 
     .policy-block-link {
       color: $COLOR--white-two;
@@ -99,18 +101,21 @@
 .policy-block-link {
   text-decoration: none;
   color: $COLOR--darkmode-gray-100;
-  padding: 10px 0px 10px 16px;
+  padding: 10px 0 10px 12px;
   display: flex;
   align-items: center;
   width: 100%;
+  transition: color 0.2s ease;
 }
 
 .policy-block-icon {
   svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
   }
-  margin-left: 4px;
+  margin-left: 6px;
 }
 
 .logo-wrapper {
@@ -118,11 +123,12 @@
   height: 48px;
   display: flex;
   align-items: center;
+  padding-bottom: 4px;
 }
 
 .logo-left {
   svg {
-    width: 48px;
+    width: 52px;
     height: 48px;
   }
 }
@@ -130,5 +136,6 @@
 .logo-right {
   width: 102px;
   height: 24px;
-  margin-left: 16px;
+  margin-left: 12px;
+  opacity: 0.9;
 }

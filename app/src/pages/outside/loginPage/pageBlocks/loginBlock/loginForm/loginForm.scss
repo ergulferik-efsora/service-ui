@@ -15,36 +15,24 @@
  */
 
 .login-form {
-  width: 380px;
+  width: 100%;
   margin: auto;
   font-family: $FONT-REGULAR;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 100%;
-  }
 }
 .login-field {
-  width: 380px;
-  margin-bottom: 30px;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 280px;
-  }
+  width: 100%;
+  margin-bottom: 20px;
 }
 .password-field {
-  width: 380px;
-  margin-bottom: 10px;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 280px;
-  }
+  width: 100%;
+  margin-bottom: 8px;
 }
 .forgot-pass {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   font-size: 13px;
   color: $COLOR--tealish;
-  text-align: left;
+  text-align: right;
   cursor: pointer;
 
   &:hover {
@@ -52,6 +40,8 @@
   }
 
   &.attempts-exceed {
+    text-align: center;
+
     @media (max-width: $SCREEN_XS_MAX) {
       position: initial;
       margin-bottom: 0;
@@ -59,17 +49,9 @@
   }
 }
 .login-button-container {
-  width: 160px;
-  height: 40px;
+  width: 100%;
+  height: 44px;
   margin: 0 auto;
-
-  @media (max-width: $SCREEN_SM_MAX) {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    margin-bottom: 34px;
-  }
 }
 .attempts-exceeded-block {
   display: flex;
@@ -81,7 +63,7 @@
 .attempts-exceeded-block-content {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 16px;
@@ -97,9 +79,5 @@
 
   b {
     font-size: 36px;
-  }
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 280px;
   }
 }

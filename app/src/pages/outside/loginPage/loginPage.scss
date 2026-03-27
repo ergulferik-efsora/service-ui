@@ -15,89 +15,55 @@
  */
 
 .login-page {
-  position: relative;
-  width: 1000px;
-  height: 764px;
-  margin: 0 auto;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1f36 0%, #2d3561 40%, #1e6a7a 100%);
+  padding: 40px 20px;
   box-sizing: border-box;
-
-  @media (max-width: $SCREEN_SM_MAX) {
-    width: 768px;
-    height: 1044px;
-    padding-bottom: 20px;
-  }
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 320px;
-    height: auto;
-    padding-bottom: 0;
-  }
 }
-.login-page-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px 0 $COLOR--skipped;
-  background-color: $COLOR--white-two;
-  box-sizing: border-box;
 
-  @media (max-width: $SCREEN_SM_MAX) {
-    padding: 80px 50px 0;
-  }
-  @media (max-width: $SCREEN_XS_MAX) {
-    padding: 0;
-    overflow: hidden;
-  }
+.logo-link {
+  display: block;
+  margin-bottom: 32px;
 }
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-image: url(./img/login-page-bgc.svg);
-  background-color: $COLOR--light-blue;
-  background-repeat: no-repeat;
-  background-size: 100%;
 
-  @media (max-width: $SCREEN_SM_MAX) {
-    width: 100%;
-    background-image: url(./img/login-page-tablet-bgc.svg);
-  }
-  @media (max-width: $SCREEN_XS_MAX) {
-    width: 100%;
-    height: 145px;
-    background-image: url(./img/login-page-mobile-bgc.svg);
-  }
-}
 .logo {
-  position: absolute;
-  top: 30px;
-  left: 60px;
-  width: 140px;
-  height: 30px;
+  width: 180px;
+  height: 38px;
   background-image: url(~common/img/logo.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   cursor: pointer;
-  z-index: 1;
+  filter: brightness(0) invert(1);
 
-  @media (max-width: $SCREEN_SM_MAX) {
-    left: 50px;
-  }
   @media (max-width: $SCREEN_XS_MAX) {
-    top: 15px;
-    left: 20px;
-    width: 100px;
-    height: 25px;
+    width: 140px;
+    height: 30px;
+  }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+
+  @media (max-width: $SCREEN_XS_MAX) {
+    max-width: 100%;
+    border-radius: 12px;
   }
 }
 
 .footer {
-  padding-bottom: 50px;
+  padding: 0 40px 20px;
 
-  &.with-policy {
-    padding-bottom: 0;
+  @media (max-width: $SCREEN_XS_MAX) {
+    padding: 0 20px 16px;
   }
 }

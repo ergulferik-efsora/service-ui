@@ -18,22 +18,30 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: solid 1px $COLOR--gray-91;
+  height: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: solid 1px #e5e7eb;
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.15s ease;
 
   &:hover {
-    background-color: $COLOR--tealish-hover;
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
   }
 
   &.active {
-    background-color: $COLOR--gray-91;
+    background-color: #eef2ff;
+    border-color: #818cf8;
 
     &:hover {
-      background-color: $COLOR--gray-91;
+      background-color: #e0e7ff;
+    }
+
+    .name {
+      color: #4338ca;
     }
   }
 }

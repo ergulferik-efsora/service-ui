@@ -24,7 +24,7 @@
 .organizations-control-wrapper {
   all: unset;
   display: flex;
-  width: 324px;
+  width: 276px;
 
   &:hover {
     .short-title {
@@ -47,21 +47,22 @@
 }
 
 .organizations-control {
-  width: 280px;
-  height: 60px;
+  width: 224px;
+  height: 56px;
   background-color: $COLOR--darkmode-gray-300;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 0px 12px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-clip: padding-box;
   border: none;
   outline: none;
-  margin-left: 12px;
+  margin-left: 8px;
   margin-right: 4px;
+  transition: background-color 0.2s ease;
 }
 
 .hover {
@@ -142,9 +143,9 @@
 
 .popover-control {
   background-color: transparent;
-  height: 60px;
+  height: 56px;
   outline: none;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 0;
 
   &:focus-visible {
@@ -158,9 +159,9 @@
   justify-content: center;
   width: 40px;
   min-width: 40px;
-  height: 60px;
+  height: 56px;
   background-color: $COLOR--darkmode-gray-300;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   color: $COLOR--darkmode-gray-100;
   text-transform: uppercase;
@@ -170,6 +171,7 @@
   font-family: $FONT-ROBOTO-BOLD;
   border: none;
   margin-left: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:focus-visible {
     outline: none;

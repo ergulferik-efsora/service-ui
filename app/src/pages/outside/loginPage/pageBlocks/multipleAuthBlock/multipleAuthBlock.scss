@@ -16,13 +16,13 @@
 
 .actions-block {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 16px;
   margin-top: 25px;
 
   @media (max-width: $SCREEN_XS_MAX) {
     flex-direction: column-reverse;
     align-items: center;
-    margin-bottom: 220px;
   }
 }
 
@@ -30,12 +30,6 @@
   display: inline-block;
   width: 160px;
   height: 40px;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    &:first-child {
-      margin-top: 10px;
-    }
-  }
 
   a {
     color: inherit;

@@ -28,8 +28,6 @@ import { EPAM, SAAS } from 'controllers/appInfo/constants';
 import { LOGIN_PAGE_EVENTS } from 'components/main/analytics/events/ga4Events/loginPageEvents';
 import { LOGIN_PAGE } from 'components/main/analytics/events';
 import styles from './loginPage.scss';
-import { LoginPageSection } from './loginPageSection';
-import { SocialSection } from './socialSection';
 import { LoginBlock } from './pageBlocks/loginBlock';
 import { ForgotPasswordBlock } from './pageBlocks/forgotPasswordBlock';
 import { ChangePasswordBlock } from './pageBlocks/changePasswordBlock';
@@ -143,23 +141,20 @@ export class LoginPage extends PureComponent {
 
     return (
       <div className={cx('login-page')}>
-        <div className={cx('login-page-content')}>
-          <div className={cx('background')} />
-          <a
-            href={referenceDictionary.rpLanding}
-            target="_blank"
-            onClick={() => tracking.trackEvent(LOGIN_PAGE_EVENTS.CLICK_ON_RPP_LOGO)}
-          >
-            <div className={cx('logo')} />
-          </a>
-          <LoginPageSection left>
-            <SocialSection />
-          </LoginPageSection>
-          <LoginPageSection>
-            {currentBlock}
+        <a
+          className={cx('logo-link')}
+          href={referenceDictionary.rpLanding}
+          target="_blank"
+          onClick={() => tracking.trackEvent(LOGIN_PAGE_EVENTS.CLICK_ON_RPP_LOGO)}
+        >
+          <div className={cx('logo')} />
+        </a>
+        <div className={cx('login-card')}>
+          {currentBlock}
+          <div className={cx('footer')}>
             {!registration && <ServiceVersionsBlock />}
             {(instanceType === EPAM || instanceType === SAAS) && <PolicyBlock />}
-          </LoginPageSection>
+          </div>
         </div>
       </div>
     );

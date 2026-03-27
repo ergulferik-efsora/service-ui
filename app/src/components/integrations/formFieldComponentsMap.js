@@ -14,13 +14,14 @@
  *  limitations under the License.
  */
 
-import { EMAIL, JIRA, LDAP, RALLY, SAML, SAUCE_LABS } from 'common/constants/pluginNames';
+import { EMAIL, JIRA, LDAP, LINEAR, RALLY, SAML, SAUCE_LABS } from 'common/constants/pluginNames';
 import { SauceLabsFormFields } from './integrationProviders/sauceLabsIntegration/sauceLabsFormFields';
 import { EmailFormFields } from './integrationProviders/emailIntegration/emailFormFields';
 import { JiraConnectionFormFields } from './integrationProviders/jiraIntegration/jiraConnectionFormFields';
 import { RallyConnectionFormFields } from './integrationProviders/rallyIntegration/rallyConnectionFormFields';
 import { SamlFormFields } from './integrationProviders/samlIntegration/samlFormFields';
 import { LdapFormFields } from './integrationProviders/ldapIntegration/ldapFormFields';
+import { LinearConnectionFormFields } from './integrationProviders/linearIntegration/linearConnectionFormFields';
 
 export const INTEGRATIONS_FORM_FIELDS_COMPONENTS_MAP = {
   [SAUCE_LABS]: SauceLabsFormFields,
@@ -29,4 +30,5 @@ export const INTEGRATIONS_FORM_FIELDS_COMPONENTS_MAP = {
   [RALLY]: RallyConnectionFormFields,
   [SAML]: SamlFormFields,
   [LDAP]: LdapFormFields,
+  [LINEAR]: LinearConnectionFormFields,
 };

@@ -18,21 +18,24 @@
 .ghost-button {
   position: relative;
   display: inline-flex;
+  align-items: center;
   justify-content: center;
-  height: 30px;
-  padding: 0 10px;
+  height: 34px;
+  padding: 0 14px;
   border: 1px solid;
+  border-radius: 8px;
   outline: none;
   box-sizing: border-box;
   font-family: $FONT-REGULAR;
   font-size: 13px;
   letter-spacing: normal;
-  line-height: 28px;
+  line-height: 32px;
   white-space: nowrap;
   text-shadow: none;
   vertical-align: top;
   background-color: $COLOR--white-two;
   cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.disabled {
     color: $COLOR--gray-60;

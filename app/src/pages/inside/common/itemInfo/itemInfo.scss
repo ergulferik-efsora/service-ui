@@ -46,8 +46,9 @@
   padding-right: 5px;
   font-family: $FONT-SEMIBOLD;
   font-size: 14px;
-  color: $COLOR--topaz;
+  color: #1e40af;
   text-decoration: none;
+  transition: color 0.15s ease;
 
   @media (max-width: $SCREEN_SM_MAX) {
     font-size: 16px;
@@ -90,12 +91,13 @@
 
 .item-badge {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 3px 10px;
   margin-right: 5px;
-  border-radius: 100px;
+  border-radius: 6px;
   color: $COLOR--white-two;
   font-size: 10px;
   font-family: $FONT-SEMIBOLD;
+  letter-spacing: 0.3px;
 
   &:nth-last-child(2) {
     margin-right: 0;

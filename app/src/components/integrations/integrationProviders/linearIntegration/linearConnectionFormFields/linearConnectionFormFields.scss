@@ -1,5 +1,5 @@
-/*!
- * Copyright 2019 EPAM Systems
+/*
+ * Copyright 2025 EPAM Systems
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,29 +14,9 @@
  * limitations under the License.
  */
 
-.forgot-password-form {
-  width: 100%;
+.fields {
+  margin-bottom: 16px;
 }
-.email-field {
-  margin: 0 auto 32px;
-  width: 100%;
-}
-.button-link {
-  text-decoration: none;
-}
-.forgot-password-buttons-container {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-}
-.forgot-password-button {
-  display: inline-block;
-  width: 176px;
-  height: 40px;
+.last-fields {
+  margin-bottom: 32px;
 }

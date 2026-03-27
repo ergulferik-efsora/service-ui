@@ -15,26 +15,34 @@
  */
 
 .btn-icon {
-  width: 48px;
+  width: 52px;
+  min-width: 52px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-start;
+  transition: transform 0.2s ease;
 
-  // TODO: refactor this in the future, it is better to exclude empty spaces from the svg
   svg {
-    width: 48px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
   }
 }
 
 .title-container {
-  width: 280px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 10px 16px;
-  row-gap: 4px;
+  padding: 8px 12px;
+  row-gap: 2px;
   font-family: var(--rp-ui-base-font-family);
+  opacity: 1;
+  transition: opacity 0.15s ease;
 }
 
 .title {
@@ -43,12 +51,17 @@
   align-items: center;
   line-height: 20px;
   font-size: 13px;
-  font-weight: var(--rp-ui-base-fw-medium);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sub-title {
   font-size: 11px;
   line-height: 16px;
+  opacity: 0.6;
 }
 
 .sidebar-button {
@@ -60,13 +73,20 @@
   color: var(--rp-ui-base-dark-e-100);
   text-decoration: none;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 0;
 
   &:hover {
-    background-color: var(--rp-ui-base-dark-e-500);
+    background-color: rgba(255, 255, 255, 0.08);
 
     .title {
       color: var(--rp-ui-base-bg-000);
+    }
+
+    .btn-icon svg {
+      opacity: 1;
     }
 
     svg path {
@@ -75,7 +95,9 @@
   }
 
   &:active {
-    background-color: var(--rp-ui-base-dark-e-500);
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: scale(0.98);
+    transition: transform 0.1s ease, background-color 0.1s ease;
 
     .title {
       color: var(--rp-ui-base-dark-topaz-pressed);
@@ -87,6 +109,24 @@
   }
 
   &.active {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 20px;
+      background: var(--rp-ui-base-dark-topaz-text);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .btn-icon svg {
+      opacity: 1;
+    }
+
     svg {
       path,
       rect,
@@ -97,6 +137,7 @@
 
     .title {
       color: var(--rp-ui-base-dark-topaz-text);
+      font-weight: 600;
     }
   }
 

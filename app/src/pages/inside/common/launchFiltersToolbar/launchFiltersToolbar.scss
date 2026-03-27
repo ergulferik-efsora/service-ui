@@ -16,10 +16,13 @@
 
 .launch-filters-toolbar {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 14px 20px;
   display: flex;
   flex-direction: column;
   background-color: $COLOR--white-two;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e5e7eb;
 }
 
 .filter-tickets-row {
@@ -43,10 +46,10 @@
 .separator {
   display: inline-block;
   vertical-align: middle;
-  height: 40px;
+  height: 28px;
   width: 1px;
-  background-color: $COLOR--gray-91;
-  margin: 0 15px;
+  background-color: #e5e7eb;
+  margin: 0 16px;
 }
 
 .expand-toggle-container {
@@ -56,8 +59,9 @@
 }
 
 .filter-controls-container {
-  background-color: $COLOR--white-four;
-  border: 1px solid $COLOR--gray-91;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding-top: 10px;
 }
 

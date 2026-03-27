@@ -23,7 +23,7 @@ import styles from './sidebar.scss';
 
 const cx = classNames.bind(styles);
 
-const COLLAPSED_WIDTH = 48;
+const COLLAPSED_WIDTH = 52;
 
 export const Sidebar = ({
   logoBlock,

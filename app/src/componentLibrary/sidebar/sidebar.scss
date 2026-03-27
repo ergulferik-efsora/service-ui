@@ -17,19 +17,19 @@
 .sidebar-container {
   height: 100%;
   font-family: $FONT-ROBOTO-REGULAR;
-  width: 48px;
-  transition: width 0.3s ease-out;
+  width: 52px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 2;
   overflow: hidden;
 }
 
 .open {
-  width: 328px;
+  width: 280px;
   animation-name: delay-overflow;
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 
 .sidebar {
@@ -38,18 +38,19 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  padding: 16px 0px 24px 0;
+  padding: 12px 0 20px 0;
   box-sizing: border-box;
   height: 100%;
-  gap: 32px;
-  background-image: linear-gradient(
-    to right,
-    $COLOR--darkmode-gray-500 0 48px,
-    $COLOR--darkmode-gray-450 48px 100%
+  gap: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(darken($COLOR--darkmode-gray-500, 4%), 1) 0%,
+    $COLOR--darkmode-gray-500 100%
   );
   z-index: 3;
-  width: 328px;
+  width: 280px;
   align-items: start;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 @keyframes delay-overflow {
@@ -62,6 +63,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 8px 0 0;
+  box-sizing: border-box;
+  gap: 2px;
 }
 
 .main-block-wrapper {
@@ -99,7 +103,7 @@
   align-items: center;
   justify-content: end;
   flex-grow: 1;
-  gap: 8px;
+  gap: 4px;
 
   .sidebar-btn {
     display: none;
@@ -119,6 +123,10 @@
   align-items: start;
   justify-content: end;
   flex-grow: 1;
-  gap: 8px;
+  gap: 4px;
   width: 100%;
+  padding: 0 8px 0 0;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 12px;
 }

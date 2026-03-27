@@ -17,5 +17,13 @@
 .info-panel {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin: 4px 0;
+  font-size: 13px;
+  color: #475569;
+  transition: background-color 0.15s ease;
 }

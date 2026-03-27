@@ -20,11 +20,11 @@
   box-shadow: none;
   background-color: transparent;
   margin: 0 auto;
-  padding: 20px 0 0;
+  padding: 20px 20px 0;
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: 1370px;
+  max-width: 1480px;
   box-sizing: border-box;
   @media (max-width: $SCREEN_XS_MAX) {
     padding: 0;
@@ -32,15 +32,15 @@
 }
 
 .page-title {
-  padding-left: 15px;
+  padding-left: 8px;
   min-height: 30px;
-  margin-bottom: 15px;
-  font-family: $FONT-CONDBOLD;
-  font-size: 16px;
-  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-family: $FONT-SEMIBOLD;
+  font-size: 20px;
+  letter-spacing: 0.3px;
   line-height: 30px;
   color: $COLOR--charcoal-grey;
-  text-transform: uppercase;
+  text-transform: none;
   @media (max-width: $SCREEN_XS_MAX) {
     display: none;
   }
@@ -48,7 +48,7 @@
 
 .page-content {
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   @media print {

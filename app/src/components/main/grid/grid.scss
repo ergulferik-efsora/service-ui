@@ -20,6 +20,10 @@
   position: relative;
   background-color: $COLOR--white-two;
   z-index: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e5e7eb;
 }
 .spinner-block {
   position: relative;

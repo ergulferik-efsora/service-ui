@@ -24,18 +24,15 @@
   line-height: 1em;
   box-sizing: border-box;
   padding: 8px 0;
-
-  @media (max-width: $SCREEN_XS_MAX) {
-    padding: 12px 0;
-  }
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .tooltip-block {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
 }
 
 .current-version {
-  margin-right: 13px;
-  font-size: 12px;
+  font-size: 11px;
   color: $COLOR--gray-47;
 }

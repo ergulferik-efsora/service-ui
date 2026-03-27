@@ -19,15 +19,17 @@
   top: -1px;
   z-index: $Z_INDEX-GRID_HEADER;
   display: table-cell;
-  color: $COLOR--gray-47;
+  color: #64748b;
   font-family: $FONT-SEMIBOLD;
-  font-size: 12px;
-  height: 50px;
+  font-size: 11px;
+  height: 42px;
   padding-right: 10px;
   padding-left: 10px;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
   vertical-align: middle;
-  background-color: $COLOR--primary-gray;
+  background-color: #f8fafc;
+  white-space: nowrap;
 
   &:first-child {
     padding-left: 20px;

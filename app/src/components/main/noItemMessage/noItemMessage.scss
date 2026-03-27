@@ -15,25 +15,30 @@
  */
 
 .no-item-message {
-  padding: 25px 0;
+  padding: 48px 24px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $COLOR--white-two;
+  border-radius: 14px;
+  border: 1px dashed #d1d5db;
 }
 .warning-icon {
   display: inline-block;
-  width: 21px;
-  height: 21px;
-  fill: $COLOR--gray-47;
+  width: 28px;
+  height: 28px;
+  fill: #94a3b8;
+  margin-bottom: 12px;
 }
 .message {
-  padding-left: 8px;
-  color: $COLOR--gray-47;
+  padding-left: 0;
+  color: #64748b;
   font-family: $FONT-REGULAR;
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
+  line-height: 1.5;
 }
 .transparent-background {
   background-color: transparent;

@@ -17,16 +17,16 @@
 .policy-block {
   box-sizing: border-box;
   text-align: center;
-  padding: 8px 0;
+  padding: 4px 0;
 
   a {
     text-decoration: none;
     color: $COLOR--tealish;
-    font-size: 12px;
+    font-size: 11px;
     font-family: $FONT-REGULAR;
-  }
 
-  @media (max-width: $SCREEN_XS_MAX) {
-    padding: 12px 0;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

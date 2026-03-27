@@ -64,16 +64,20 @@ $LEVEL_OFFSET_STEP: 20px;
 
 .grid-row-wrapper {
   display: table-row-group;
-  border-bottom: 1px solid $COLOR--primary-gray;
+  border-bottom: 1px solid #f1f5f9;
   background-color: var(--background-color, $COLOR--white-two);
-  transition: background-color 0.2s ease 0s;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    background-color: #f8fafc;
+  }
 
   &.selected {
-    background-color: $COLOR--gray-91;
+    background-color: #eff6ff;
 
     .accordion-block {
-      background-color: $COLOR--gray-91;
-      box-shadow: 0 -15px 20px 0px $COLOR--gray-91;
+      background-color: #eff6ff;
+      box-shadow: 0 -15px 20px 0px #eff6ff;
 
       &.expanded {
         box-shadow: none;
@@ -87,7 +91,7 @@ $LEVEL_OFFSET_STEP: 20px;
     left: 0;
     right: 0;
     height: 1px;
-    background-color: $COLOR--primary-gray;
+    background-color: #f1f5f9;
   }
 }
 .grid-row {
